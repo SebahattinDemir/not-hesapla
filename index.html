@@ -11,12 +11,20 @@
     />
     <title>Not Hesaplama</title>
   </head>
-  <body class="p-5">
+  <body
+    style="
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    "
+  >
     <div class="card" style="width: 20rem">
       <div class="card-body" style="background-color: #ace6ee">
+        <span class="card-title mb-3 d-flex justify-content-center fs-3 fw-bold">Calculate Score</span>
         <div class="input-group flex-nowrap mb-3">
           <span
-            class="input-group-text justify-content-center"
+            class="input-group-text justify-content-center fw-bold"
             style="
               border: 1px;
               width: 5.5rem;
@@ -29,12 +37,17 @@
           <input
             type="number"
             class="form-control"
-            style="border: none; box-shadow: none; appearance: none; text-align: center;"
+            style="
+              border: none;
+              box-shadow: none;
+              appearance: none;
+              text-align: center;
+            "
           />
         </div>
         <div class="input-group flex-nowrap mb-3">
           <span
-            class="input-group-text justify-content-center"
+            class="input-group-text justify-content-center fw-bold"
             style="
               border: 1px;
               width: 5.5rem;
@@ -47,12 +60,17 @@
           <input
             type="number"
             class="form-control"
-            style="border: none; box-shadow: none; appearance: none; text-align: center;"
+            style="
+              border: none;
+              box-shadow: none;
+              appearance: none;
+              text-align: center;
+            "
           />
         </div>
         <div class="input-group flex-nowrap mb-3">
           <span
-            class="input-group-text justify-content-center"
+            class="input-group-text justify-content-center fw-bold"
             style="
               border: 1px;
               width: 5.5rem;
@@ -65,13 +83,18 @@
           <input
             type="number"
             class="form-control"
-            style="border: none; box-shadow: none; appearance: none; text-align: center;"
+            style="
+              border: none;
+              box-shadow: none;
+              appearance: none;
+              text-align: center;
+            "
           />
         </div>
-        <button class="btn btn-danger" style="width: 5.5rem; height: 2.3rem">
+        <button class="btn btn-danger fw-bold align-items-center " style="width: 5.5rem; height: 2.3rem">
           GPA
         </button>
-        <label class="form-label" id="txtResult">Sonuç</label>
+        <label class="form-label fw-bold" id="txtResult">Sonuç</label>
       </div>
     </div>
   </body>
