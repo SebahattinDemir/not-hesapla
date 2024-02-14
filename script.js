@@ -5,17 +5,28 @@ const btnGAP = document.querySelector("#btnGAP");
 const txtResult = document.querySelector("#txtResult");
 
 btnGAP.addEventListener("click", () => {
-    const score1 = txtScore1.value;
-    const score2 = txtScore2.value;
-    const score3 = txtScore3.value;
+    const score1 = parseFloat(txtScore1.value);
+    const score2 = parseFloat(txtScore2.value);
+    const score3 = parseFloat(txtScore3.value);
 
-    isScoreValid(score1) ?? alert("Please enter a valid 1st Score");
-    isScoreValid(score2) ?? alert("Please enter a valid 2nd Score");
-    isScoreValid(score3) ?? alert("Please enter a valid 3rd Score");
+    if (!isScoreValid(score1)) {
+        alert("Please enter a valid 1st Score");
+        return;
+    }
+    
+    if (!isScoreValid(score2)) {
+        alert("Please enter a valid 2nd Score");
+        return;
+    }
+    
+    if (!isScoreValid(score3)) {
+        alert("Please enter a valid 3rd Score");
+        return;
+    }
 
     const average = getAverage(score1, score2, score3);
-
-    alert(average);
+    const letterGrade = convertScoreToLetter(average);
+    txtResult.textContent = `Ortalamanız: "${average.toFixed(0)}" ve harf notunuz: "${letterGrade}"`;
 });
 
 const isScoreValid = (score) => {
